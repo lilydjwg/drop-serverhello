@@ -1,0 +1,19 @@
+[package]
+name = "drop-serverhello"
+version = "0.1.0"
+authors = []
+edition = "2018"
+
+[dependencies]
+log = "*"
+env_logger = "*"
+failure = "*"
+pnet_packet = "*"
+tls-parser = "*"
+
+[dependencies.netfilter_queue]
+git = "https://github.com/lilydjwg/libnetfilter_queue.git"
+# path = "../libnetfilter_queue"
+
+[profile.release]
+lto = true
